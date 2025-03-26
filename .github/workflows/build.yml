@@ -11,6 +11,7 @@ jobs:
         run: |
           python3 -m pip install gftools
           python3 -m pip install fontbakery
+          python3 -m pip install shaperglot
       - name: build
         run: |
           gftools builder googlefonts.yaml
