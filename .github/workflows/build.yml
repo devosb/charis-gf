@@ -21,7 +21,7 @@ jobs:
           path: fonts
       - name: fontbakery
         run: |
-          fontbakery check-googlefonts fonts/variable/*.ttf --html fonts/variable/googlefonts.html -F --succinct -S
+          fontbakery check-googlefonts fonts/variable/*.ttf --html fonts/variable/googlefonts.html -F --succinct -S -e FATAL
       - uses: actions/upload-artifact@v4
         with:
           name: fontbakery report
