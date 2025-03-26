@@ -1,0 +1,27 @@
+name: Google Fonts Builder
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: install
+        run: |
+          python3 -m pip install gftools
+          python3 -m pip install fontbakery
+      - name: build
+        run: |
+          gftools builder googlefonts.yaml
+      - uses: actions/upload-artifact@v4
+        with:
+          name: built fonts
+          path: fonts
+      - name: fontbakery
+        run: |
+          fontbakery check-googlefonts fonts/variable/*.ttf --html fonts/variable/googlefonts.html -F --succinct -S
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fontbakery report
+          path: fonts/variable/googlefonts.html

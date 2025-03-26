@@ -1,0 +1,15 @@
+sources:
+  - source/variable/Charis.designspace
+  - source/variable/Charis-Italic.designspace
+axisOrder:
+  - wght
+  - ital
+familyName: "Charis"
+includeSourceFixes: false
+flattenComponents: false
+autohintTTF: false
+
+buildStatic: false
+buildWebfont: true
+buildSmallCap: false
+outputDir: fonts
