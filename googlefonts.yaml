@@ -13,3 +13,5 @@ buildStatic: false
 buildWebfont: true
 buildSmallCap: false
 outputDir: fonts
+vfDir: $outputDir
+woffDir: $outputDir/web
